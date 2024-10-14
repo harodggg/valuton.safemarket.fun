@@ -1,12 +1,18 @@
  function Header() {
      return (
-      <div>
-      <p>Valuton</p>
-      <p>金库</p>
-      <p>stats</p>
-      <p>文档</p>
-      <p>connect</p>
-      </div>
+         <nav>
+  <ul>
+    <li>Valuton</li>
+    <li>金库</li>
+    <li>stats</li>
+    <li>文档</li>
+    <li>connect</li>
+  </ul>
+         <hr></hr>
+</nav>
+
+
+
   )
   }
 
