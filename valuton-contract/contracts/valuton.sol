@@ -45,6 +45,7 @@ contract Valuton {
     function reportLido() public {
         // 存入保证金
 
+
         // 将合约的其他功能关闭
         PauseStatus = false
 
