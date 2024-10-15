@@ -3,11 +3,11 @@
          <nav>
   <ul>
     <li>Valuton</li>
-    <li>金库</li>
-    <li>stats</li>
-    <li>dashboard</li>
-    <li>文档</li>
-    <li>connect</li>
+    <li><a>金库</a></li>
+    <li><a>stats</a></li>
+    <li><a>dashboard</a></li>
+    <li><a>文档</a></li>
+    <li><a>connect</a></li>
   </ul>
          <hr></hr>
 </nav>
