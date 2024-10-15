@@ -8,4 +8,4 @@
 
 # contract design (Version 1). only support Lido
 
-![](assets/2024-10-15-18-13-05.png)
+![contract desion version 1](assets/2024-10-15-18-27-29.png)
