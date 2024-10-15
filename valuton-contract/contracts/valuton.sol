@@ -7,7 +7,6 @@ contract Valuton {
     map (address,amount)  = [{"userAddress":"amount"}];
 
     function withdrawLido() public {
-
         if !PauseStatus {
             revert
         }
@@ -15,13 +14,13 @@ contract Valuton {
     }
 
     function dispatch() public {
-        if !PasuerStatus {
+        if !PasueStatus {
             revert
         }
     }
 
     function depositLido() public {
-        if !PauserStatus {
+        if !PauseStatus {
             revert
         }
     }
@@ -30,10 +29,13 @@ contract Valuton {
 
 
     function reportLido() public {
-        // 将合约的其他功能关闭
-        PauseStatus = false;
-
         // 存入保证金
+
+        // 将合约的其他功能关闭
+        PauseStatus = false
+
+        // 清算所有的奖励给用户
+
     }
 
 }
