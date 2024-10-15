@@ -2,14 +2,18 @@ contract Valuton {
 
     bool PauseStatus = true;
 
+    bool AgreeStatus = true;
+
     map (address,timestrap) = [{"userAddress":"timestrap"}];  // unix time
 
     map (address,amount)  = [{"userAddress":"amount"}];
 
-    function withdrawLido() public {
+    function withdrawLido(amount,agree,) public {
+
         if !PauseStatus {
             revert
         }
+
 
     }
 
@@ -19,7 +23,7 @@ contract Valuton {
         }
     }
 
-    function depositLido() public {
+    function depositLido(amount,agree,) public {
         if !PauseStatus {
             revert
         }
