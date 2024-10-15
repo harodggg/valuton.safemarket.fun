@@ -6,4 +6,6 @@
 
 # front design
 
-# contract design
+# contract design (Version 1). only support Lido
+
+![](assets/2024-10-15-17-21-58.png)
