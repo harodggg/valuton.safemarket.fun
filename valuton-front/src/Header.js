@@ -7,7 +7,7 @@
     <li><a>stats</a></li>
     <li><a>dashboard</a></li>
     <li><a>文档</a></li>
-    <li><a>connect</a></li>
+    <li><button>connect</button></li>
   </ul>
          <hr></hr>
 </nav>
