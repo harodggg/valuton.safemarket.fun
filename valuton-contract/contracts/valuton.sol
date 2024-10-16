@@ -9,16 +9,26 @@ contract Valuton {
 
 
     // map(address: timestamp)
-    map(address => uint) DepositTimeYes = [{"userAddress":"timestrap"}];  // unix time
-    map(address => uint) DepositTimeNo = [{"userAddress":"amount"}];
+    // [{"userAddress":"timestamp"}];  // unix time
+    map(address => uint) DepositTimeYes public;
+
+    map(address => uint) DepositTimeNo public;
 
 
     // map(address: amount)
-    map(address => uint) DepositYes  = [{"userAddress":"amount"}];
-    map(address => uint) DepositNo  = [{"userAddress":"amount"}];
+    // [{"userAddress":"amount"}];
+    map(address => uint) DepositYes public;
+    map(address => uint) DepositNo public;
 
 
-    function withdrawLido(amount,agree,) public {
+    // enum
+    enum Opinion {
+        Agree,
+        DisAgree
+    }
+
+
+    function withdrawLido(uint amount,opinion) public {
 
         if !PauseStatus {
             revert
