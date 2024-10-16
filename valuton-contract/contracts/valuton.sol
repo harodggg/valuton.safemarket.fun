@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.21;
 
 contract Valuton {
 
@@ -10,15 +10,15 @@ contract Valuton {
 
     // map(address: timestamp)
     // [{"userAddress":"timestamp"}];  // unix time
-    map(address => uint) DepositTimeYes public;
+    mapping(address => uint) public DepositTimeYes;
 
-    map(address => uint) DepositTimeNo public;
+    mapping(address => uint) public DepositTimeNo;
 
 
     // map(address: amount)
     // [{"userAddress":"amount"}];
-    map(address => uint) DepositYes public;
-    map(address => uint) DepositNo public;
+    mapping(address => uint) public DepositYes;
+    mapping(address => uint) public DepositNo;
 
 
     // enum
@@ -30,7 +30,7 @@ contract Valuton {
 
     function withdrawLido(uint amount,Opinion opinion) public {
 
-        if !PauseStatus {
+        if (!PauseStatus) {
             revert
         }
 
@@ -38,13 +38,13 @@ contract Valuton {
     }
 
     function dispatch() public {
-        if !PasueStatus {
+        if (!PasueStatus) {
             revert
         }
     }
 
-    function depositLido(amount,agree,) public {
-        if !PauseStatus {
+    function depositLido(uint amount,Opinion opinion) public {
+        if (!PauseStatus) {
             revert
         }
 
