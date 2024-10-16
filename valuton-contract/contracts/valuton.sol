@@ -31,24 +31,24 @@ contract Valuton {
     function withdrawLido(uint amount,Opinion opinion) public {
 
         if (!PauseStatus) {
-            revert
+            revert;
         }
 
 
     }
 
     function dispatch() public {
-        if (!PasueStatus) {
-            revert
+        if (!PauseStatus) {
+            revert;
         }
     }
 
     function depositLido(uint amount,Opinion opinion) public {
         if (!PauseStatus) {
-            revert
+            revert;
         }
 
-        if agree = true {
+        if (opinion == Opinion.Agree) {
 
         } else {
 
@@ -64,7 +64,7 @@ contract Valuton {
 
 
         // 将合约的其他功能关闭
-        PauseStatus = false
+        PauseStatus = false;
 
         // 清算所有的奖励给用户
 
