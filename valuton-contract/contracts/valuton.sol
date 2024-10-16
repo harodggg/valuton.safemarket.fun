@@ -1,14 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.25;
+
 contract Valuton {
 
     bool PauseStatus = true;
 
     bool AgreeStatus = true;
 
-    map DepositTimeYes(address,timestrap) = [{"userAddress":"timestrap"}];  // unix time
-    map DepositTimeNo(address,amount)  = [{"userAddress":"amount"}];
 
-    map DepositYes(address,amount)  = [{"userAddress":"amount"}];
-    map DepositNo(address,amount)  = [{"userAddress":"amount"}];
+    // map(address: timestamp)
+    map(address => uint) DepositTimeYes = [{"userAddress":"timestrap"}];  // unix time
+    map(address => uint) DepositTimeNo = [{"userAddress":"amount"}];
+
+
+    // map(address: amount)
+    map(address => uint) DepositYes  = [{"userAddress":"amount"}];
+    map(address => uint) DepositNo  = [{"userAddress":"amount"}];
 
 
     function withdrawLido(amount,agree,) public {
