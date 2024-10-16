@@ -28,7 +28,7 @@ contract Valuton {
     }
 
 
-    function withdrawLido(uint amount,opinion) public {
+    function withdrawLido(uint amount,Opinion opinion) public {
 
         if !PauseStatus {
             revert
