@@ -28,10 +28,15 @@ contract Valuton {
     }
 
 
+    // error
+
+    error ContractPauseStatus();
+
+
     function withdrawLido(uint amount,Opinion opinion) public {
 
         if (!PauseStatus) {
-            revert;
+            revert ContractPauseStatus();
         }
 
 
@@ -39,13 +44,13 @@ contract Valuton {
 
     function dispatch() public {
         if (!PauseStatus) {
-            revert;
+            revert ContractPauseStatus();
         }
     }
 
     function depositLido(uint amount,Opinion opinion) public {
         if (!PauseStatus) {
-            revert;
+            revert ContractPauseStatus();
         }
 
         if (opinion == Opinion.Agree) {
